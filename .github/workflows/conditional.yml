@@ -13,14 +13,11 @@ jobs:
   show-env:
     runs-on: ubuntu-latest
     steps:
-      - name: Show choice
+      - name: Show environment
         run: echo "Gekozen ${{ inputs.environment }}"
-      - name: Development
-        if: inputs.environment == 'development'
-        run: echo "Dit is development"
-      - name: Staging
-        if: inputs.environment == 'staging'
-        run: echo "Dit is staging"
       - name: Production
         if: inputs.environment == 'production'
-        run: echo "Dit is production"
+        run: echo "Deploying to production!"
+      - name: Test mode
+        if: inputs.environment == 'development' || inputs.environment == 'staging'
+        run: echo "Running in test mode"
