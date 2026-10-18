@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello world:
+  hello-world:
     runs-on: ubuntu-latest
     steps:
      - run: echo hello world
