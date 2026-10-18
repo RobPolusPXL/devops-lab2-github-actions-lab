@@ -8,6 +8,6 @@ jobs:
       - name: Create directory
         run: mkdir nieuwe_map
       - name: Create file with text
-        run: cat 'dit is een korte tekst' > nieuwe_map/lab2.txt
+        run: echo 'dit is een korte tekst' > nieuwe_map/lab2.txt
       - name: Check file
         run: cat nieuwe_map/lab2.txt
